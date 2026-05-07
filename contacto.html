@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- DOCTYPE: le dice al navegador que esto es HTML5 -->
+
+<html lang="es">
+<!-- lang="es": idioma español -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- charset: permite tildes y caracteres especiales -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- viewport: adapta la página a celulares -->
+
+  <title>Contacto - Módulo 3.2</title>
+  <!-- title: texto que aparece en la pestaña del navegador -->
+
+  <link rel="stylesheet" href="style.css">
+  <!-- link: conecta con el mismo style.css del proyecto -->
+</head>
+
+<body>
+
+  <!-- HEADER: mismo estilo que index.html para que se vea uniforme -->
+  <header>
+    <div class="header-badge">BTVDS 3.2 · Tercer Año</div>
+    <h1>Contacto</h1>
+    <p class="subtitulo">Información del estudiante que elaboró esta página</p>
+  </header>
+
+  <!-- NAV: menú de navegación — el enlace "Contacto" lleva de vuelta aquí
+       y el enlace "Inicio" lleva al index.html -->
+  <nav>
+    <!-- href="index.html": navega al archivo index.html -->
+    <a href="index.html">🏠 Inicio</a>
+    <a href="index.html#objetivo">🎯 Objetivo</a>
+    <a href="index.html#temas">📚 Temas</a>
+    <!-- este enlace apunta a esta misma página -->
+    <a href="contacto.html">✉️ Contacto</a>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN PRINCIPAL DE CONTACTO
+         Rellena cada campo con tu información
+         antes de hacer git push
+         ══════════════════════════════════════════ -->
+    <section id="contacto">
+      <div class="section-header">
+        <div class="section-icon">✉️</div>
+        <h2>Información del Estudiante</h2>
+      </div>
+
+      <p>Esta página fue elaborada como trabajo individual del Módulo 3.2 de la especialidad de Desarrollo de Software.</p>
+
+      <!-- contacto-grid: cuadrícula definida en style.css -->
+      <div class="contacto-grid">
+
+        <div class="contacto-item">
+          <span class="contacto-label">👤 Nombre completo</span>
+          <!-- CAMBIA ESTE TEXTO por tu nombre y apellido -->
+          <span class="contacto-valor">Tu nombre aquí</span>
+        </div>
+
+        <div class="contacto-item">
+          <span class="contacto-label">🎓 Grado y Sección</span>
+          <!-- CAMBIA ESTE TEXTO por tu grado y sección -->
+          <span class="contacto-valor">Tercer Año · Sección Única</span>
+        </div>
+
+        <div class="contacto-item">
+          <span class="contacto-label">📧 Correo electrónico</span>
+          <!-- CAMBIA ESTE TEXTO por tu correo -->
+          <span class="contacto-valor">tucorreo@gmail.com</span>
+        </div>
+
+        <div class="contacto-item">
+          <span class="contacto-label">🐙 GitHub</span>
+          <!-- CAMBIA la URL y el texto por tu usuario real de GitHub -->
+          <a class="contacto-valor contacto-link"
+             href="https://github.com/tu-usuario"
+             target="_blank">
+            github.com/tu-usuario
+          </a>
+        </div>
+
+        <div class="contacto-item">
+          <span class="contacto-label">🧑‍🏫 Docente</span>
+          <!-- Este no lo cambies -->
+          <span class="contacto-valor">Raquel Esperanza Medrano</span>
+        </div>
+
+        <div class="contacto-item">
+          <span class="contacto-label">📚 Módulo</span>
+          <span class="contacto-valor">BTVDS 3.2 · 2026</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN: SOBRE ESTE PROYECTO
+         Describe brevemente qué hiciste
+         ══════════════════════════════════════════ -->
+    <section id="sobre">
+      <div class="section-header">
+        <div class="section-icon">📝</div>
+        <h2>Sobre este Proyecto</h2>
+      </div>
+
+      <ul>
+        <li><strong>Tecnologías usadas:</strong> HTML5 y CSS3.</li>
+        <li><strong>Control de versiones:</strong> Git y GitHub con mínimo 3 commits.</li>
+        <li><strong>Publicado en:</strong> GitHub Pages.</li>
+        <!-- CAMBIA ESTE TEXTO: describe en tus palabras de qué trata la página -->
+        <li><strong>Descripción:</strong> Página informativa sobre los temas del Módulo 3.2, incluyendo mantenimiento preventivo, correctivo, normas ISO, ITIL v3 y planes de contingencia.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER igual al de index.html -->
+  <footer>
+    <p><strong>Módulo BTVDS 3.2</strong> · Mantenimiento y Aseguramiento de la Operación del Sistema Informático</p>
+    <p>Bachillerato Técnico Vocacional en Desarrollo de Software · Tercer Año · 2026</p>
+  </footer>
+
+</body>
+</html>

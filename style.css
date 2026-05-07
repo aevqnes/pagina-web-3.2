@@ -1,0 +1,393 @@
+/* ================================================
+   style.css
+   Hoja de estilos principal del sitio.
+   Se conecta al index.html con:
+   <link rel="stylesheet" href="style.css">
+   ================================================ */
+
+/* -- Importar fuentes de Google Fonts -- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap');
+
+/* -- Variables CSS: paleta negro, gris y rosado -- */
+:root {
+  --negro: #0d0d0d;
+  --gris-oscuro: #1a1a1a;
+  --gris-medio: #2c2c2c;
+  --gris-borde: #3a3a3a;
+  --gris-suave: #6b6b6b;
+  --gris-claro: #b0b0b0;
+  --rosado: #e8789a;
+  --rosado-claro: #f4a7be;
+  --rosado-oscuro: #c0506e;
+  --rosado-fondo: #2a1520;
+  --blanco: #f5f5f5;
+  --texto: #e0e0e0;
+  --sombra: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+/* -- Reset básico -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -- Estilo base del body con fondo negro -- */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--negro);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+/* ── HEADER ─────────────────────────────────── */
+/* Fondo negro con degradado rosado sutil */
+header {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a0d12 50%, #2a1520 100%);
+  color: white;
+  padding: 65px 40px 85px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+/* Círculo decorativo rosado arriba a la derecha */
+header::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 350px; height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,120,154,0.15) 0%, transparent 70%);
+}
+
+/* Círculo decorativo rosado abajo a la izquierda */
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,120,154,0.1) 0%, transparent 70%);
+}
+
+/* Badge pequeño encima del título */
+.header-badge {
+  display: inline-block;
+  background: rgba(232,120,154,0.15);
+  border: 1px solid var(--rosado);
+  color: var(--rosado-claro);
+  padding: 4px 18px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Título principal con fuente Playfair Display elegante */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.3;
+  max-width: 750px;
+  margin: 0 auto 16px;
+  /* degradado de blanco a rosado en el texto */
+  background: linear-gradient(135deg, #ffffff 40%, var(--rosado-claro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header .subtitulo {
+  color: var(--gris-claro);
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Chips de datos debajo del subtítulo */
+.header-datos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.header-datos span {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--gris-borde);
+  color: var(--gris-claro);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ── NAVEGACIÓN ─────────────────────────────── */
+/* Menú fijo al hacer scroll gracias a position: sticky */
+nav {
+  background: var(--gris-oscuro);
+  border-bottom: 1px solid var(--gris-borde);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Cada enlace del menú */
+nav a {
+  color: var(--gris-claro);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: all 0.25s;
+}
+
+/* Hover: fondo rosado oscuro y texto blanco */
+nav a:hover {
+  background: var(--rosado-oscuro);
+  color: white;
+}
+
+/* ── MAIN ───────────────────────────────────── */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ── SECCIONES ──────────────────────────────── */
+/* Fondo gris oscuro con borde rosado a la izquierda */
+section {
+  background: var(--gris-oscuro);
+  border-radius: 16px;
+  padding: 35px 40px;
+  box-shadow: var(--sombra);
+  border-left: 5px solid var(--rosado);
+  animation: fadeUp 0.5s ease both;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Retraso escalonado por sección */
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
+section:nth-child(4) { animation-delay: 0.4s; }
+section:nth-child(5) { animation-delay: 0.5s; }
+section:nth-child(6) { animation-delay: 0.6s; }
+section:nth-child(7) { animation-delay: 0.7s; }
+
+/* Encabezado interno con ícono y título */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+/* Ícono con degradado rosado */
+.section-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--rosado-oscuro), var(--rosado-claro));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Título de cada sección en rosado claro */
+section h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--rosado-claro);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+section p {
+  margin-bottom: 12px;
+  color: var(--texto);
+}
+
+/* ── LISTAS ─────────────────────────────────── */
+section ul {
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Item con borde rosado a la izquierda */
+section ul li {
+  padding: 10px 14px;
+  background: var(--gris-medio);
+  border-radius: 8px;
+  border-left: 3px solid var(--rosado);
+  font-size: 0.95rem;
+  color: var(--texto);
+}
+
+/* ── TARJETAS ───────────────────────────────── */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Tarjeta con fondo gris medio y borde superior rosado */
+.tarjeta {
+  background: var(--gris-medio);
+  border: 1px solid var(--gris-borde);
+  border-top: 3px solid var(--rosado);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* La tarjeta sube al pasar el mouse */
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(232,120,154,0.2);
+}
+
+.tarjeta h3 {
+  color: var(--rosado-claro);
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.tarjeta p {
+  font-size: 0.875rem;
+  color: var(--gris-claro);
+  margin: 0;
+}
+
+/* ── TABLA ──────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Encabezado de tabla en rosado oscuro */
+th {
+  background: var(--rosado-oscuro);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 700;
+}
+
+td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--gris-borde);
+  color: var(--texto);
+}
+
+/* Filas pares con fondo levemente diferente */
+tr:nth-child(even) td {
+  background-color: var(--gris-medio);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── SECCIÓN ALERTA (continuidad) ───────────── */
+/* Cambia el color del borde y el fondo levemente */
+.alerta {
+  background: var(--rosado-fondo);
+  border-left: 5px solid var(--rosado-claro) !important;
+}
+
+.alerta h2 {
+  color: var(--rosado-claro);
+}
+
+/* ── FOOTER ─────────────────────────────────── */
+footer {
+  background: var(--gris-oscuro);
+  border-top: 1px solid var(--gris-borde);
+  color: var(--gris-suave);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.85rem;
+  line-height: 2;
+}
+
+footer strong {
+  color: var(--rosado);
+}
+
+/* ── CONTACTO ───────────────────────────────── */
+/* Cuadrícula de 2 columnas para los datos de contacto */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+/* Cada tarjeta de dato de contacto */
+.contacto-item {
+  background: var(--gris-medio);
+  border: 1px solid var(--gris-borde);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Etiqueta pequeña del campo (Nombre, Correo, etc.) */
+.contacto-label {
+  font-size: 0.78rem;
+  color: var(--rosado);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Valor del campo — aquí va el contenido que llenas tú */
+.contacto-valor {
+  font-size: 0.95rem;
+  color: var(--texto);
+  font-weight: 600;
+}
+
+/* Estilo especial para el enlace de GitHub */
+.contacto-link {
+  color: var(--rosado-claro);
+  text-decoration: none;
+}
+
+.contacto-link:hover {
+  text-decoration: underline;
+}

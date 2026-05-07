@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- charset: permite tildes y caracteres especiales -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- viewport: adapta la página a celulares y tablets -->
+
+  <title>Módulo 3.2 - Mantenimiento de Sistemas Informáticos</title>
+  <!-- title: texto que aparece en la pestaña del navegador -->
+
+  <link rel="stylesheet" href="style.css">
+  <!-- link: conecta este HTML con los estilos del archivo style.css -->
+</head>
+
+<body>
+
+  <!-- HEADER: bloque principal de presentación con gradiente definido en style.css -->
+  <header>
+    <div class="header-badge">BTVDS 3.2 · Tercer Año</div>
+    <h1>Mantenimiento y Aseguramiento de la Operación del Sistema Informático</h1>
+    <p class="subtitulo">Investigación sobre los pilares que mantienen los sistemas funcionando de forma segura y continua</p>
+    <div class="header-datos">
+      <span>🧑‍🏫 Raquel Esperanza Medrano</span>
+      <span>⏱️ 120 Horas</span>
+      <span>💻 Desarrollo de Software</span>
+    </div>
+  </header>
+
+  <!-- NAV: menú de navegación fijo (sticky) — cada href apunta al id de una sección -->
+  <nav>
+    <a href="#intro">¿Qué es?</a>
+    <a href="#preventivo">Preventivo</a>
+    <a href="#correctivo">Correctivo</a>
+    <a href="#planes">Planes</a>
+    <a href="#iso">ISO</a>
+    <a href="#itil">ITIL v3</a>
+    <a href="#continuidad">Continuidad</a>
+    <!-- href="contacto.html": abre la página de contacto -->
+    <a href="contacto.html">✉️ Contacto</a>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN 1: Introducción al mantenimiento
+         ══════════════════════════════════════════ -->
+    <section id="intro">
+      <div class="section-header">
+        <div class="section-icon">🖥️</div>
+        <h2>¿Qué es el Mantenimiento de Sistemas?</h2>
+      </div>
+      <p>El <strong>mantenimiento de sistemas informáticos</strong> es el conjunto de actividades técnicas y administrativas orientadas a conservar la infraestructura tecnológica de una organización en condiciones óptimas de operación, seguridad y disponibilidad.</p>
+      <p>Sin un mantenimiento adecuado, los sistemas fallan con frecuencia, generando pérdidas económicas, retrasos en los procesos y daño a la imagen institucional. Por eso, toda organización que depende de la tecnología necesita un área dedicada a esta función.</p>
+
+      <ul>
+        <li><strong>Disponibilidad:</strong> el sistema debe estar operativo cuando se necesite, minimizando tiempos de inactividad.</li>
+        <li><strong>Integridad:</strong> los datos y procesos deben mantenerse correctos y sin alteraciones no autorizadas.</li>
+        <li><strong>Seguridad:</strong> proteger la información y los equipos de amenazas internas y externas.</li>
+        <li><strong>Rendimiento:</strong> garantizar que el sistema opere a la velocidad y capacidad esperada.</li>
+      </ul>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN 2: Mantenimiento Preventivo
+         ══════════════════════════════════════════ -->
+    <section id="preventivo">
+      <div class="section-header">
+        <div class="section-icon">🛡️</div>
+        <h2>Mantenimiento Preventivo</h2>
+      </div>
+      <p>El mantenimiento preventivo consiste en realizar acciones planificadas <strong>antes de que ocurra un fallo</strong>. Su objetivo es reducir la probabilidad de que el sistema presente errores, mediante revisiones periódicas y actualizaciones programadas.</p>
+      <p>Es el tipo de mantenimiento más recomendado porque reduce costos a largo plazo y evita interrupciones inesperadas en los servicios.</p>
+
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>🔄 Actualizaciones de software</h3>
+          <p>Aplicar parches de seguridad y nuevas versiones del sistema operativo y aplicaciones para corregir vulnerabilidades conocidas.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>🧹 Limpieza de hardware</h3>
+          <p>Limpiar físicamente los equipos (polvo, ventiladores, conectores) para evitar sobrecalentamiento y fallos eléctricos.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>💾 Copias de seguridad</h3>
+          <p>Programar respaldos automáticos y periódicos de la información para poder recuperarla ante cualquier incidente.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>📊 Monitoreo del sistema</h3>
+          <p>Usar herramientas que supervisen el uso de CPU, memoria, disco y red para detectar anomalías antes de que causen problemas.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN 3: Mantenimiento Correctivo
+         ══════════════════════════════════════════ -->
+    <section id="correctivo">
+      <div class="section-header">
+        <div class="section-icon">🔧</div>
+        <h2>Mantenimiento Correctivo</h2>
+      </div>
+      <p>El mantenimiento correctivo se aplica <strong>cuando el fallo ya ocurrió</strong>. Su propósito es restablecer el sistema a su estado normal de operación en el menor tiempo posible, minimizando el impacto en los usuarios y los procesos organizacionales.</p>
+      <p>Aunque no se puede eliminar por completo, sí se puede reducir su frecuencia con un buen mantenimiento preventivo.</p>
+
+      <table>
+        <tr>
+          <th>Tipo</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+        <tr>
+          <td>Inmediato</td>
+          <td>Se atiende en cuanto se detecta el fallo.</td>
+          <td>Servidor caído que se reinicia de urgencia.</td>
+        </tr>
+        <tr>
+          <td>Diferido</td>
+          <td>Se programa para atenderse en un momento conveniente.</td>
+          <td>Reparación de disco duro con sectores dañados.</td>
+        </tr>
+        <tr>
+          <td>De emergencia</td>
+          <td>Fallo crítico que requiere atención inmediata fuera de horario.</td>
+          <td>Caída total de la red en horario laboral.</td>
+        </tr>
+      </table>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN 4: Planes Operativos y Contingenciales
+         ══════════════════════════════════════════ -->
+    <section id="planes">
+      <div class="section-header">
+        <div class="section-icon">📋</div>
+        <h2>Planes Operativos y de Contingencia</h2>
+      </div>
+      <p>Un <strong>plan operativo de TI</strong> define las actividades, responsables, recursos y fechas para mantener los sistemas funcionando durante un período determinado. Es el documento que guía el trabajo del área de mantenimiento día a día.</p>
+      <p>Un <strong>plan de contingencia</strong> establece los pasos a seguir cuando ocurre una emergencia o fallo grave. Responde a la pregunta: <em>¿qué hacemos si el sistema falla?</em></p>
+
+      <ul>
+        <li><strong>Identificación de riesgos:</strong> listar qué puede fallar y cuál sería su impacto en la operación.</li>
+        <li><strong>Estrategias de respuesta:</strong> definir qué hacer ante cada tipo de fallo (restaurar backup, activar servidor alterno, etc.).</li>
+        <li><strong>Responsables y roles:</strong> asignar quién hace qué durante la contingencia para evitar confusión.</li>
+        <li><strong>Pruebas periódicas:</strong> simular fallos para verificar que el plan funciona antes de que sea necesario de verdad.</li>
+        <li><strong>Documentación:</strong> registrar cada incidente y su solución para mejorar el plan continuamente.</li>
+      </ul>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN 5: Normas ISO
+         ══════════════════════════════════════════ -->
+    <section id="iso">
+      <div class="section-header">
+        <div class="section-icon">📜</div>
+        <h2>Normas ISO en Sistemas Informáticos</h2>
+      </div>
+      <p>Las normas <strong>ISO (Organización Internacional de Normalización)</strong> son estándares internacionales que establecen requisitos y buenas prácticas para diferentes áreas. En TI, las más relevantes son las que tratan calidad, seguridad y gestión de servicios.</p>
+      <p>Aplicar normas ISO en una organización permite mejorar la confianza de los clientes, reducir riesgos y demostrar que los procesos cumplen estándares reconocidos mundialmente.</p>
+
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>ISO 9001</h3>
+          <p>Sistema de Gestión de Calidad. Asegura que los procesos de TI se realicen con consistencia y orientación al cliente.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>ISO/IEC 27001</h3>
+          <p>Sistema de Gestión de Seguridad de la Información. Define cómo proteger datos confidenciales frente a amenazas y vulnerabilidades.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>ISO/IEC 20000</h3>
+          <p>Estándar para la gestión de servicios de TI. Compatible con ITIL, define los requisitos mínimos que debe cumplir un proveedor de servicios tecnológicos.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>ISO 22301</h3>
+          <p>Continuidad del negocio. Establece cómo preparar a una organización para seguir operando ante desastres o interrupciones graves.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN 6: ITIL v3
+         ══════════════════════════════════════════ -->
+    <section id="itil">
+      <div class="section-header">
+        <div class="section-icon">⚙️</div>
+        <h2>ITIL v3 — Gestión de Servicios de TI</h2>
+      </div>
+      <p><strong>ITIL (Information Technology Infrastructure Library)</strong> es un conjunto de buenas prácticas para la gestión de servicios de tecnología. Su versión 3 organiza todo el ciclo de vida de un servicio en 5 fases:</p>
+
+      <table>
+        <tr>
+          <th>Fase</th>
+          <th>¿Qué hace?</th>
+        </tr>
+        <tr>
+          <td>1. Estrategia del Servicio</td>
+          <td>Define qué servicios ofrecer y cómo alinearlos con los objetivos del negocio.</td>
+        </tr>
+        <tr>
+          <td>2. Diseño del Servicio</td>
+          <td>Planifica cómo se construirá y entregará el servicio de forma eficiente.</td>
+        </tr>
+        <tr>
+          <td>3. Transición del Servicio</td>
+          <td>Gestiona el paso del servicio del desarrollo a la operación real sin interrupciones.</td>
+        </tr>
+        <tr>
+          <td>4. Operación del Servicio</td>
+          <td>Mantiene el servicio funcionando día a día, resolviendo incidentes y solicitudes.</td>
+        </tr>
+        <tr>
+          <td>5. Mejora Continua</td>
+          <td>Evalúa constantemente el servicio para hacerlo mejor con el tiempo.</td>
+        </tr>
+      </table>
+
+      <p style="margin-top:16px;">ITIL no es una norma obligatoria, sino una <strong>guía de buenas prácticas</strong> que cada organización adapta a su realidad. Su aplicación reduce costos, mejora la calidad del servicio y aumenta la satisfacción de los usuarios.</p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECCIÓN 7: Continuidad — usa clase "alerta"
+         para diferenciarse visualmente (borde naranja)
+         ══════════════════════════════════════════ -->
+    <section id="continuidad" class="alerta">
+      <div class="section-header">
+        <div class="section-icon">⚠️</div>
+        <h2>¿Por qué es crítica la Continuidad Operativa?</h2>
+      </div>
+      <p>Cuando un sistema informático falla sin que exista un plan de respuesta, las consecuencias para la organización pueden ser graves e inmediatas.</p>
+
+      <ul>
+        <li><strong>Pérdida económica directa:</strong> cada hora sin sistema puede significar ventas perdidas, multas o pagos de penalización.</li>
+        <li><strong>Daño a la reputación:</strong> los clientes y usuarios pierden confianza en una organización que no puede garantizar sus servicios.</li>
+        <li><strong>Pérdida de datos:</strong> sin respaldos adecuados, un fallo puede eliminar información valiosa de forma permanente.</li>
+        <li><strong>Retrasos en la cadena productiva:</strong> los procesos que dependen del sistema se detienen, afectando a toda la organización.</li>
+      </ul>
+
+      <p style="margin-top:14px;">La <strong>continuidad operativa</strong> se logra combinando mantenimiento preventivo, planes de contingencia, normas ISO y buenas prácticas como ITIL, formando un sistema integral de protección y respuesta.</p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: pie de página con información de cierre -->
+  <footer>
+    <p><strong>Módulo BTVDS 3.2</strong> · Mantenimiento y Aseguramiento de la Operación del Sistema Informático</p>
+    <p>Bachillerato Técnico Vocacional en Desarrollo de Software · Tercer Año · 2026</p>
+  </footer>
+
+</body>
+</html>
